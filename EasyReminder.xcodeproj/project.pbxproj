@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		902982321CCAC68E0013FE81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902982311CCAC68E0013FE81 /* AppDelegate.swift */; };
+		902982341CCAC68E0013FE81 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902982331CCAC68E0013FE81 /* ReminderViewController.swift */; };
+		902982371CCAC68E0013FE81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 902982351CCAC68E0013FE81 /* Main.storyboard */; };
+		902982391CCAC68E0013FE81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 902982381CCAC68E0013FE81 /* Assets.xcassets */; };
+		9029823C1CCAC68E0013FE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9029823A1CCAC68E0013FE81 /* LaunchScreen.storyboard */; };
+		902982441CCAC7C90013FE81 /* ThingsToRememberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 902982431CCAC7C90013FE81 /* ThingsToRememberCell.xib */; };
+		902982461CCACB460013FE81 /* ThingsToRememberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902982451CCACB460013FE81 /* ThingsToRememberCell.swift */; };
+		902982481CCADE490013FE81 /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902982471CCADE490013FE81 /* Thing.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9029822E1CCAC68E0013FE81 /* EasyReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		902982311CCAC68E0013FE81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		902982331CCAC68E0013FE81 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		902982361CCAC68E0013FE81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		902982381CCAC68E0013FE81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9029823B1CCAC68E0013FE81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9029823D1CCAC68E0013FE81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		902982431CCAC7C90013FE81 /* ThingsToRememberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThingsToRememberCell.xib; sourceTree = "<group>"; };
+		902982451CCACB460013FE81 /* ThingsToRememberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThingsToRememberCell.swift; sourceTree = "<group>"; };
+		902982471CCADE490013FE81 /* Thing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9029822B1CCAC68E0013FE81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		902982251CCAC68E0013FE81 = {
+			isa = PBXGroup;
+			children = (
+				902982301CCAC68E0013FE81 /* EasyReminder */,
+				9029822F1CCAC68E0013FE81 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9029822F1CCAC68E0013FE81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9029822E1CCAC68E0013FE81 /* EasyReminder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		902982301CCAC68E0013FE81 /* EasyReminder */ = {
+			isa = PBXGroup;
+			children = (
+				902982311CCAC68E0013FE81 /* AppDelegate.swift */,
+				902982331CCAC68E0013FE81 /* ReminderViewController.swift */,
+				902982471CCADE490013FE81 /* Thing.swift */,
+				902982451CCACB460013FE81 /* ThingsToRememberCell.swift */,
+				902982351CCAC68E0013FE81 /* Main.storyboard */,
+				902982431CCAC7C90013FE81 /* ThingsToRememberCell.xib */,
+				902982381CCAC68E0013FE81 /* Assets.xcassets */,
+				9029823A1CCAC68E0013FE81 /* LaunchScreen.storyboard */,
+				9029823D1CCAC68E0013FE81 /* Info.plist */,
+			);
+			path = EasyReminder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9029822D1CCAC68E0013FE81 /* EasyReminder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 902982401CCAC68E0013FE81 /* Build configuration list for PBXNativeTarget "EasyReminder" */;
+			buildPhases = (
+				9029822A1CCAC68E0013FE81 /* Sources */,
+				9029822B1CCAC68E0013FE81 /* Frameworks */,
+				9029822C1CCAC68E0013FE81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyReminder;
+			productName = EasyReminder;
+			productReference = 9029822E1CCAC68E0013FE81 /* EasyReminder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		902982261CCAC68E0013FE81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Yaxin Yuan";
+				TargetAttributes = {
+					9029822D1CCAC68E0013FE81 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = T9DJN8R6E9;
+					};
+				};
+			};
+			buildConfigurationList = 902982291CCAC68E0013FE81 /* Build configuration list for PBXProject "EasyReminder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 902982251CCAC68E0013FE81;
+			productRefGroup = 9029822F1CCAC68E0013FE81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9029822D1CCAC68E0013FE81 /* EasyReminder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9029822C1CCAC68E0013FE81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				902982441CCAC7C90013FE81 /* ThingsToRememberCell.xib in Resources */,
+				9029823C1CCAC68E0013FE81 /* LaunchScreen.storyboard in Resources */,
+				902982391CCAC68E0013FE81 /* Assets.xcassets in Resources */,
+				902982371CCAC68E0013FE81 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9029822A1CCAC68E0013FE81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				902982481CCADE490013FE81 /* Thing.swift in Sources */,
+				902982341CCAC68E0013FE81 /* ReminderViewController.swift in Sources */,
+				902982461CCACB460013FE81 /* ThingsToRememberCell.swift in Sources */,
+				902982321CCAC68E0013FE81 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		902982351CCAC68E0013FE81 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				902982361CCAC68E0013FE81 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9029823A1CCAC68E0013FE81 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9029823B1CCAC68E0013FE81 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9029823E1CCAC68E0013FE81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9029823F1CCAC68E0013FE81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		902982411CCAC68E0013FE81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EasyReminder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JYuan.EasyReminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		902982421CCAC68E0013FE81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EasyReminder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JYuan.EasyReminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		902982291CCAC68E0013FE81 /* Build configuration list for PBXProject "EasyReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9029823E1CCAC68E0013FE81 /* Debug */,
+				9029823F1CCAC68E0013FE81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		902982401CCAC68E0013FE81 /* Build configuration list for PBXNativeTarget "EasyReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				902982411CCAC68E0013FE81 /* Debug */,
+				902982421CCAC68E0013FE81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 902982261CCAC68E0013FE81 /* Project object */;
+}

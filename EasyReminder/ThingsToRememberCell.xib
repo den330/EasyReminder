@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Things" id="EBj-Ci-hHZ" customClass="ThingsToRememberCell" customModule="EasyReminder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EBj-Ci-hHZ" id="l7h-at-pqh">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsD-nL-50z">
+                        <rect key="frame" x="8" y="43" width="304" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="Ase-EV-HFc"/>
+                            <constraint firstAttribute="height" constant="21" id="FYD-cl-UWy"/>
+                            <constraint firstAttribute="height" constant="27" id="Omt-uc-Z6d"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ase-EV-HFc"/>
+                                <exclude reference="Omt-uc-Z6d"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bl-pc-AMx">
+                        <rect key="frame" x="8" y="8" width="304" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="6bl-pc-AMx" secondAttribute="trailing" constant="8" id="1Gk-dt-A8t"/>
+                    <constraint firstItem="RsD-nL-50z" firstAttribute="leading" secondItem="l7h-at-pqh" secondAttribute="leadingMargin" id="3J4-FY-yNc"/>
+                    <constraint firstAttribute="trailing" secondItem="6bl-pc-AMx" secondAttribute="trailing" constant="8" id="3bt-j2-5mb"/>
+                    <constraint firstAttribute="bottom" secondItem="RsD-nL-50z" secondAttribute="bottom" constant="8" id="55m-Yq-KT0"/>
+                    <constraint firstItem="RsD-nL-50z" firstAttribute="top" secondItem="6bl-pc-AMx" secondAttribute="bottom" constant="14" id="7gm-SB-Iuf"/>
+                    <constraint firstItem="6bl-pc-AMx" firstAttribute="top" secondItem="l7h-at-pqh" secondAttribute="top" constant="8" id="8FW-EV-LTO"/>
+                    <constraint firstItem="6bl-pc-AMx" firstAttribute="leading" secondItem="l7h-at-pqh" secondAttribute="leading" constant="8" id="8Y9-bv-ojU"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="RsD-nL-50z" secondAttribute="bottom" id="BB1-WF-BKF"/>
+                    <constraint firstItem="RsD-nL-50z" firstAttribute="leading" secondItem="l7h-at-pqh" secondAttribute="leading" constant="8" id="Fgw-tM-GUN"/>
+                    <constraint firstItem="6bl-pc-AMx" firstAttribute="top" secondItem="l7h-at-pqh" secondAttribute="top" constant="8" id="LKZ-TJ-rcM"/>
+                    <constraint firstItem="6bl-pc-AMx" firstAttribute="leading" secondItem="l7h-at-pqh" secondAttribute="leading" constant="8" id="OfA-0I-3Vn"/>
+                    <constraint firstAttribute="trailing" secondItem="RsD-nL-50z" secondAttribute="trailing" constant="8" id="QHK-2d-2KC"/>
+                    <constraint firstAttribute="trailing" secondItem="6bl-pc-AMx" secondAttribute="trailing" constant="8" id="TYs-Kp-r3p"/>
+                    <constraint firstItem="RsD-nL-50z" firstAttribute="top" secondItem="6bl-pc-AMx" secondAttribute="bottom" constant="14" id="UH7-tt-Nbe"/>
+                    <constraint firstItem="6bl-pc-AMx" firstAttribute="top" secondItem="l7h-at-pqh" secondAttribute="top" constant="8" id="V3u-cc-aUq"/>
+                    <constraint firstItem="RsD-nL-50z" firstAttribute="top" secondItem="6bl-pc-AMx" secondAttribute="bottom" constant="8" id="ZHs-y5-DOo"/>
+                    <constraint firstAttribute="trailing" secondItem="RsD-nL-50z" secondAttribute="trailing" constant="8" id="deU-x4-UnZ"/>
+                    <constraint firstItem="6bl-pc-AMx" firstAttribute="leading" secondItem="l7h-at-pqh" secondAttribute="leading" constant="8" id="fr9-uX-W9N"/>
+                    <constraint firstItem="RsD-nL-50z" firstAttribute="top" secondItem="6bl-pc-AMx" secondAttribute="bottom" constant="8" id="hdL-4C-ST9"/>
+                    <constraint firstItem="RsD-nL-50z" firstAttribute="trailing" secondItem="l7h-at-pqh" secondAttribute="trailingMargin" id="mIT-ci-Nb9"/>
+                    <constraint firstItem="RsD-nL-50z" firstAttribute="leading" secondItem="l7h-at-pqh" secondAttribute="leading" constant="8" id="nii-dz-i6r"/>
+                    <constraint firstItem="RsD-nL-50z" firstAttribute="leading" secondItem="l7h-at-pqh" secondAttribute="leading" constant="8" id="nmp-WN-u1c"/>
+                    <constraint firstAttribute="trailing" secondItem="RsD-nL-50z" secondAttribute="trailing" constant="8" id="yFO-FO-JK0"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="1Gk-dt-A8t"/>
+                        <exclude reference="8FW-EV-LTO"/>
+                        <exclude reference="LKZ-TJ-rcM"/>
+                        <exclude reference="OfA-0I-3Vn"/>
+                        <exclude reference="TYs-Kp-r3p"/>
+                        <exclude reference="fr9-uX-W9N"/>
+                        <exclude reference="55m-Yq-KT0"/>
+                        <exclude reference="7gm-SB-Iuf"/>
+                        <exclude reference="BB1-WF-BKF"/>
+                        <exclude reference="Fgw-tM-GUN"/>
+                        <exclude reference="QHK-2d-2KC"/>
+                        <exclude reference="ZHs-y5-DOo"/>
+                        <exclude reference="deU-x4-UnZ"/>
+                        <exclude reference="hdL-4C-ST9"/>
+                        <exclude reference="nii-dz-i6r"/>
+                        <exclude reference="nmp-WN-u1c"/>
+                        <exclude reference="yFO-FO-JK0"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="subTitle" destination="RsD-nL-50z" id="PYH-Q6-LMc"/>
+                <outlet property="titleLabel" destination="6bl-pc-AMx" id="cz6-gb-cOp"/>
+            </connections>
+            <point key="canvasLocation" x="905" y="488"/>
+        </tableViewCell>
+    </objects>
+</document>
