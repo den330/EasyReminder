@@ -7,68 +7,89 @@
 //
 
 import UIKit
+import CoreData
 
-
-
-
-
-class ReminderViewController: UITableViewController {
+class ReminderViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    var things = [Thing]()
+    var managedObjectContext: NSManagedObjectContext!
     var dateForm = NSDateFormatter()
+    
+    lazy var fetchedResultsController: NSFetchedResultsController = {
+        let fetchRequest = NSFetchRequest()
+        let entity = NSEntityDescription.entityForName("Thing", inManagedObjectContext: self.managedObjectContext)
+        fetchRequest.entity = entity
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        fetchRequest.fetchBatchSize = 20
+        
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController.delegate = self
+        return fetchedResultsController
+    }()
+    
+    private struct constantNum{
+        static let rowHeight: CGFloat = 70
+    }
+    
+    func performFetch(){
+        do{
+            try fetchedResultsController.performFetch()
+        }catch{
+            fatalError()
+        }
+    }
+    
+
    
     override func viewDidLoad() {
         super.viewDidLoad()
         let cellNib = UINib(nibName: "ThingsToRememberCell", bundle: nil)
-        tableView.registerNib(cellNib, forCellReuseIdentifier: "Things")
-        
-        let thing1 = Thing()
-        let thing2 = Thing()
-        
-        thing1.title = "haha"
-        thing1.text = "dasdasdasasa"
-        thing2.title = "hehe"
-        
-        thing1.date = NSDate()
-        thing2.date = NSDate()
-        
-        things.append(thing1)
-        things.append(thing2)
-        
+        tableView.registerNib(cellNib, forCellReuseIdentifier: "ThingCell")
         dateForm.dateFormat = "yyyy-MM-dd"
+        performFetch()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return things.count
+        if let sectionInfo = fetchedResultsController.sections{
+            return sectionInfo[section].numberOfObjects
+        }else{
+            return 0
+        }
+    }
+    
+    func configureCell(cell: ThingsToRememberCell, indexPath: NSIndexPath){
+        let thing = fetchedResultsController.objectAtIndexPath(indexPath) as! Thing
+        cell.titleLabel.text = thing.title
+        let dateNow = thing.date
+        cell.subTitle.text = dateForm.stringFromDate(dateNow)
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Things", forIndexPath: indexPath) as! ThingsToRememberCell
-        cell.titleLabel.text = things[indexPath.row].title!
-        let dateNow = things[indexPath.row].date
-        if let dateReal = dateNow{
-            cell.subTitle.text = dateForm.stringFromDate(dateReal)
-        }else{
-            cell.subTitle.text = "NA"
-        }
+       let cell = tableView.dequeueReusableCellWithIdentifier("ThingCell", forIndexPath: indexPath) as! ThingsToRememberCell
+        configureCell(cell, indexPath: indexPath)
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 70
+        return constantNum.rowHeight
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("ShowDetail", sender: things[indexPath.row])
+        let thing = fetchedResultsController.objectAtIndexPath(indexPath)
+        performSegueWithIdentifier("ShowDetail", sender: thing)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ShowDetail"{
-            let controller = segue.destinationViewController as! DetailViewController
-            let thing = sender as! Thing
-            controller.currentTitle = thing.title
-            controller.currentText = thing.text
+        let controller = segue.destinationViewController as! DetailViewController
+        controller.managedObjectContext = managedObjectContext
+        let identifier = segue.identifier!
+        switch identifier{
+        case "ShowDetail":
+                let thing = sender as! Thing
+                controller.currentTitle = thing.title
+                controller.currentText = thing.content
+        default: break
         }
     }
 }

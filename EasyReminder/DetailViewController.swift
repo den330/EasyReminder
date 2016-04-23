@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController {
     
     var currentText: String?
     var currentTitle: String?
+    var managedObjectContext: NSManagedObjectContext!
     
     @IBOutlet weak var passageTitle: UITextField!
     @IBOutlet weak var Content: UITextView!
@@ -24,6 +26,15 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func Done(){
+        let thing = NSEntityDescription.insertNewObjectForEntityForName("Thing", inManagedObjectContext: managedObjectContext) as! Thing
+        thing.content = Content.text
+        thing.title = passageTitle.text
+        thing.date = NSDate()
+        do{
+            try managedObjectContext.save()
+        }catch{
+            fatalError()
+        }
         navigationController!.popViewControllerAnimated(true)
     }
     

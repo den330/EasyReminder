@@ -14,8 +14,10 @@
 		9029823C1CCAC68E0013FE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9029823A1CCAC68E0013FE81 /* LaunchScreen.storyboard */; };
 		902982441CCAC7C90013FE81 /* ThingsToRememberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 902982431CCAC7C90013FE81 /* ThingsToRememberCell.xib */; };
 		902982461CCACB460013FE81 /* ThingsToRememberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902982451CCACB460013FE81 /* ThingsToRememberCell.swift */; };
-		902982481CCADE490013FE81 /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902982471CCADE490013FE81 /* Thing.swift */; };
 		90A2714F1CCAF19300568A1E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2714E1CCAF19300568A1E /* DetailViewController.swift */; };
+		90D3563A1CCBB60500DEC6AB /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90D356381CCBB60500DEC6AB /* DataModel.xcdatamodeld */; };
+		90D3563F1CCBB6D900DEC6AB /* Thing+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3563D1CCBB6D900DEC6AB /* Thing+CoreDataProperties.swift */; };
+		90D356401CCBB6D900DEC6AB /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3563E1CCBB6D900DEC6AB /* Thing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +30,10 @@
 		9029823D1CCAC68E0013FE81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		902982431CCAC7C90013FE81 /* ThingsToRememberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThingsToRememberCell.xib; sourceTree = "<group>"; };
 		902982451CCACB460013FE81 /* ThingsToRememberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThingsToRememberCell.swift; sourceTree = "<group>"; };
-		902982471CCADE490013FE81 /* Thing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
 		90A2714E1CCAF19300568A1E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		90D356391CCBB60500DEC6AB /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		90D3563D1CCBB6D900DEC6AB /* Thing+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Thing+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		90D3563E1CCBB6D900DEC6AB /* Thing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +66,12 @@
 		902982301CCAC68E0013FE81 /* EasyReminder */ = {
 			isa = PBXGroup;
 			children = (
+				90D3563D1CCBB6D900DEC6AB /* Thing+CoreDataProperties.swift */,
+				90D3563E1CCBB6D900DEC6AB /* Thing.swift */,
 				902982311CCAC68E0013FE81 /* AppDelegate.swift */,
 				902982331CCAC68E0013FE81 /* ReminderViewController.swift */,
 				90A2714E1CCAF19300568A1E /* DetailViewController.swift */,
-				902982471CCADE490013FE81 /* Thing.swift */,
+				90D356381CCBB60500DEC6AB /* DataModel.xcdatamodeld */,
 				902982451CCACB460013FE81 /* ThingsToRememberCell.swift */,
 				902982351CCAC68E0013FE81 /* Main.storyboard */,
 				902982431CCAC7C90013FE81 /* ThingsToRememberCell.xib */,
@@ -149,11 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				902982481CCADE490013FE81 /* Thing.swift in Sources */,
 				902982341CCAC68E0013FE81 /* ReminderViewController.swift in Sources */,
 				90A2714F1CCAF19300568A1E /* DetailViewController.swift in Sources */,
+				90D3563A1CCBB60500DEC6AB /* DataModel.xcdatamodeld in Sources */,
 				902982461CCACB460013FE81 /* ThingsToRememberCell.swift in Sources */,
+				90D3563F1CCBB6D900DEC6AB /* Thing+CoreDataProperties.swift in Sources */,
 				902982321CCAC68E0013FE81 /* AppDelegate.swift in Sources */,
+				90D356401CCBB6D900DEC6AB /* Thing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +316,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		90D356381CCBB60500DEC6AB /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				90D356391CCBB60500DEC6AB /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 90D356391CCBB60500DEC6AB /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 902982261CCAC68E0013FE81 /* Project object */;
 }
