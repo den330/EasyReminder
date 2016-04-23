@@ -11,4 +11,5 @@ import Foundation
 class Thing{
     var title: String?
     var date: NSDate?
+    var text: String?
 }

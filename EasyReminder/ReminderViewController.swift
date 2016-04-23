@@ -26,6 +26,7 @@ class ReminderViewController: UITableViewController {
         let thing2 = Thing()
         
         thing1.title = "haha"
+        thing1.text = "dasdasdasasa"
         thing2.title = "hehe"
         
         thing1.date = NSDate()
@@ -67,6 +68,7 @@ class ReminderViewController: UITableViewController {
             let controller = segue.destinationViewController as! DetailViewController
             let thing = sender as! Thing
             controller.currentTitle = thing.title
+            controller.currentText = thing.text
         }
     }
 }

@@ -20,6 +20,15 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         passageTitle.text = currentTitle
         Content.text = currentText
+        self.automaticallyAdjustsScrollViewInsets = false
+    }
+    
+    @IBAction func Done(){
+        navigationController!.popViewControllerAnimated(true)
+    }
+    
+    @IBAction func Cancel(){
+        navigationController!.popViewControllerAnimated(true)
     }
     
     
