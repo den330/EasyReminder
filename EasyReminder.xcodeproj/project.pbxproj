@@ -15,6 +15,7 @@
 		902982441CCAC7C90013FE81 /* ThingsToRememberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 902982431CCAC7C90013FE81 /* ThingsToRememberCell.xib */; };
 		902982461CCACB460013FE81 /* ThingsToRememberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902982451CCACB460013FE81 /* ThingsToRememberCell.swift */; };
 		902982481CCADE490013FE81 /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902982471CCADE490013FE81 /* Thing.swift */; };
+		90A2714F1CCAF19300568A1E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2714E1CCAF19300568A1E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		902982431CCAC7C90013FE81 /* ThingsToRememberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThingsToRememberCell.xib; sourceTree = "<group>"; };
 		902982451CCACB460013FE81 /* ThingsToRememberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThingsToRememberCell.swift; sourceTree = "<group>"; };
 		902982471CCADE490013FE81 /* Thing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
+		90A2714E1CCAF19300568A1E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				902982311CCAC68E0013FE81 /* AppDelegate.swift */,
 				902982331CCAC68E0013FE81 /* ReminderViewController.swift */,
+				90A2714E1CCAF19300568A1E /* DetailViewController.swift */,
 				902982471CCADE490013FE81 /* Thing.swift */,
 				902982451CCACB460013FE81 /* ThingsToRememberCell.swift */,
 				902982351CCAC68E0013FE81 /* Main.storyboard */,
@@ -148,6 +151,7 @@
 			files = (
 				902982481CCADE490013FE81 /* Thing.swift in Sources */,
 				902982341CCAC68E0013FE81 /* ReminderViewController.swift in Sources */,
+				90A2714F1CCAF19300568A1E /* DetailViewController.swift in Sources */,
 				902982461CCACB460013FE81 /* ThingsToRememberCell.swift in Sources */,
 				902982321CCAC68E0013FE81 /* AppDelegate.swift in Sources */,
 			);
@@ -301,6 +305,7 @@
 				902982421CCAC68E0013FE81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

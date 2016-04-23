@@ -35,7 +35,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Cx2-d1-1T8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Dr8-Pj-UrU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Dr8-Pj-UrU">
+                            <connections>
+                                <segue destination="Pdh-xA-DGp" kind="show" identifier="ShowAdd" id="fVl-B6-jSl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="Pdh-xA-DGp" kind="show" identifier="ShowDetail" id="sz3-sI-Qwa"/>
@@ -45,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="93" y="1104"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="aby-UL-O2n">
             <objects>
-                <viewController id="Pdh-xA-DGp" sceneMemberID="viewController">
+                <viewController id="Pdh-xA-DGp" customClass="DetailViewController" customModule="EasyReminder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eH1-O2-nn8"/>
                         <viewControllerLayoutGuide type="bottom" id="lOe-50-acq"/>
@@ -85,10 +89,17 @@
                             <constraint firstItem="ggC-n1-Atb" firstAttribute="leading" secondItem="SVg-cH-EN3" secondAttribute="leading" constant="20" id="z7h-Hy-0fE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Content" destination="EaW-wP-db8" id="02x-4j-Ykl"/>
+                        <outlet property="passageTitle" destination="ggC-n1-Atb" id="eXY-17-xq8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uj4-b4-wNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="775" y="1104"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fVl-B6-jSl"/>
+    </inferredMetricsTieBreakers>
 </document>

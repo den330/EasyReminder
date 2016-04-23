@@ -37,12 +37,6 @@ class ReminderViewController: UITableViewController {
         dateForm.dateFormat = "yyyy-MM-dd"
     }
     
-    
-    
-    
-    
-    
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return things.count
     }
@@ -63,9 +57,17 @@ class ReminderViewController: UITableViewController {
         return 70
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("ShowDetail", sender: things[indexPath.row])
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
     
-
-
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowDetail"{
+            let controller = segue.destinationViewController as! DetailViewController
+            let thing = sender as! Thing
+            controller.currentTitle = thing.title
+        }
+    }
 }
 
