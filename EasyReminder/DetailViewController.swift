@@ -10,23 +10,27 @@ import UIKit
 import CoreData
 
 class DetailViewController: UIViewController {
-    
-    var currentText: String?
-    var currentTitle: String?
+
     var managedObjectContext: NSManagedObjectContext!
+    var thingToEdit: Thing?
     
     @IBOutlet weak var passageTitle: UITextField!
     @IBOutlet weak var Content: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        passageTitle.text = currentTitle
-        Content.text = currentText
+        passageTitle.text = thingToEdit?.title
+        Content.text = thingToEdit?.content
         self.automaticallyAdjustsScrollViewInsets = false
     }
     
     @IBAction func Done(){
-        let thing = NSEntityDescription.insertNewObjectForEntityForName("Thing", inManagedObjectContext: managedObjectContext) as! Thing
+        let thing: Thing
+        if let thingCurrent = thingToEdit{
+             thing = thingCurrent
+        }else{
+             thing = NSEntityDescription.insertNewObjectForEntityForName("Thing", inManagedObjectContext: managedObjectContext) as! Thing
+        }
         thing.content = Content.text
         thing.title = passageTitle.text
         thing.date = NSDate()

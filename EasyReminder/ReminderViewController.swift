@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ReminderViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class ReminderViewController: UITableViewController,NSFetchedResultsControllerDelegate{
     
     var managedObjectContext: NSManagedObjectContext!
     var dateForm = NSDateFormatter()
@@ -86,11 +86,11 @@ class ReminderViewController: UITableViewController, NSFetchedResultsControllerD
         let identifier = segue.identifier!
         switch identifier{
         case "ShowDetail":
-                let thing = sender as! Thing
-                controller.currentTitle = thing.title
-                controller.currentText = thing.content
-        default: break
+                controller.thingToEdit = sender as? Thing
+                default: break
         }
     }
 }
+
+
 
