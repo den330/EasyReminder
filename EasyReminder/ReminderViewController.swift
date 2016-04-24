@@ -80,6 +80,19 @@ class ReminderViewController: UITableViewController{
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete{
+            let thing = fetchedResultsController.objectAtIndexPath(indexPath) as! Thing
+            managedObjectContext.deleteObject(thing)
+            
+            do{
+                try managedObjectContext.save()
+            }catch{
+                fatalError()
+            }
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let controller = segue.destinationViewController as! DetailViewController
         controller.managedObjectContext = managedObjectContext
@@ -96,7 +109,6 @@ class ReminderViewController: UITableViewController{
 extension ReminderViewController: NSFetchedResultsControllerDelegate {
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
-        print("*** controllerWillChangeContent")
         tableView.beginUpdates()
     }
     
@@ -122,28 +134,11 @@ extension ReminderViewController: NSFetchedResultsControllerDelegate {
         }
     }
     
-    func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
-        switch type {
-        case .Insert:
-            print("*** NSFetchedResultsChangeInsert (section)")
-            tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
-            
-        case .Delete:
-            print("*** NSFetchedResultsChangeDelete (section)")
-            tableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
-            
-        case .Update:
-            print("*** NSFetchedResultsChangeUpdate (section)")
-            
-        case .Move:
-            print("*** NSFetchedResultsChangeMove (section)")
-        }
-    }
+
     
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
-        print("*** controllerDidChangeContent")
         tableView.endUpdates()
-}
+    }
 }
 
 
