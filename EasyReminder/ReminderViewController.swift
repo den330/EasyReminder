@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ReminderViewController: UITableViewController,NSFetchedResultsControllerDelegate{
+class ReminderViewController: UITableViewController{
     
     var managedObjectContext: NSManagedObjectContext!
     var dateForm = NSDateFormatter()
@@ -90,6 +90,60 @@ class ReminderViewController: UITableViewController,NSFetchedResultsControllerDe
                 default: break
         }
     }
+}
+
+
+extension ReminderViewController: NSFetchedResultsControllerDelegate {
+    
+    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+        print("*** controllerWillChangeContent")
+        tableView.beginUpdates()
+    }
+    
+    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+        switch type {
+        case .Insert:
+            print("*** NSFetchedResultsChangeInsert (object)")
+            tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
+            
+        case .Delete:
+            print("*** NSFetchedResultsChangeDelete (object)")
+            tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
+            
+        case .Update:
+            print("*** NSFetchedResultsChangeUpdate (object)")
+            if let cell = tableView.cellForRowAtIndexPath(indexPath!) as? ThingsToRememberCell {
+                configureCell(cell, indexPath: indexPath!)
+            }
+        case .Move:
+            print("*** NSFetchedResultsChangeMove (object)")
+            tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
+            tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
+        }
+    }
+    
+    func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
+        switch type {
+        case .Insert:
+            print("*** NSFetchedResultsChangeInsert (section)")
+            tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
+            
+        case .Delete:
+            print("*** NSFetchedResultsChangeDelete (section)")
+            tableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
+            
+        case .Update:
+            print("*** NSFetchedResultsChangeUpdate (section)")
+            
+        case .Move:
+            print("*** NSFetchedResultsChangeMove (section)")
+        }
+    }
+    
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        print("*** controllerDidChangeContent")
+        tableView.endUpdates()
+}
 }
 
 
